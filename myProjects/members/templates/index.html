@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Members</h1>
+
+    <table border="1">
+    {% for x in myMembers %}
+    <tr>
+    <td style="width:100px">{{ x.id }}</td>
+    <td style="width:200px">{{ x.firstname }}</td>
+    <td style="width:200px">{{ x.lastname }}</td>
+    <td><a href="edit/{{ x.id }}">edit</a></td>
+    <td><a href="delete/{{ x.id }}">delete</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <a href="create/">Add member</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Edit member</h1>
+
+    <form action="update/{{ myMember.id }}" method="post">
+        {% csrf_token %}
+        First Name:<br>
+        <input name="first" value="{{ myMember.firstname }}" type="text">
+        <br><br>
+        Last Name:<br>
+        <input name="last" value="{{ myMember.lastname}}" type="text">
+        <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
